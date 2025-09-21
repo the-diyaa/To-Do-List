@@ -13,10 +13,12 @@ body{
 
 .listBody{
     background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);;
-    padding: 20px;
-    height: 100px;
+     padding: 20px;
     width: 400px;
-    border-radius: 5%;
+    border-radius: 15px;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .heading h1{
@@ -29,6 +31,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .addItem input{
@@ -39,10 +42,10 @@ body{
     padding: 2px;
 }
 
-.addItem #add{
+.addItem #addBtn {
     height: 40px;
-    width: 15%;
-    border-radius: 5px white;
+    width: 25%;
+    border-radius: 5px;
     border: 2px solid;
     background-color: rgb(83, 172, 83);
     color: white;
@@ -50,6 +53,73 @@ body{
     font-size: large;
 }
 
-.addItem #add:hover{
+.addItem #addBtn:hover {
     background-color: rgb(5, 107, 5);
+}
+
+#taskList {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#taskList li {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+#taskList li:hover {
+    transform: translateY(-2px);
+}
+
+#taskList li span {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    transition: 0.2s;
+}
+
+#taskList li span.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+#taskList li .delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: red;
+    transition: 0.2s;
+}
+
+#taskList li .delete:hover {
+    transform: scale(1.2);
+}
+
+#clearBtn {
+    margin-top: 30px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FF4C4C;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#clearBtn:hover {
+    background-color: #C70000;
 }
